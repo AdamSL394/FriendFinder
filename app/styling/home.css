@@ -1,0 +1,20 @@
+.display-4{
+    animation: title 3s steps(12);
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    border-right: 3px solid black;
+    width:12ch;
+
+}   
+@keyframes title {
+    0%{
+        width:0ch;
+    }
+    100%{
+        width:12ch;
+    }
+}
+.btn:hover{
+    display:"hi"
+}

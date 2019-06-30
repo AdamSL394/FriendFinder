@@ -14,6 +14,22 @@ var surveyAnswers = [
         7,
         5
         ]
+    },
+    {   
+        name:"Jason",
+        photo:"oudsgfous",
+        scores:[
+        1,
+        3,
+        2,
+        3,
+        1,
+        2,
+        5,
+        6,
+        7,
+        5
+        ]
     }
 ];
 
