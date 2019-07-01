@@ -17,36 +17,25 @@ module.exports = function (app) {
             for(var i = 0; i<surveyResults.length;i++){
                 var difference = 0
                 for(var j = 0; j < surveyResults[i].scores.length; j++){
-                   console.log((parseInt(surveyResults[i].scores[j])))
-                    difference  += parseInt(currentPerson.scores[j]) - (parseInt(surveyResults[i].scores[j]))
-                    console.log("below is the equator in the for loop ");
-                    console.log(equator);
-                    equator.push({diff:difference,name:surveyResults.name});
+                //    console.log((parseInt(surveyResults[i].scores[j])))
+                    difference  += Math.abs((parseInt(currentPerson.scores[j]) - (parseInt(surveyResults[i].scores[j]))))
+                    // console.log("below is the equator in the for loop ");
+                    
+                    
                 }
-                
-                // surveyResults.push(req.body);
-                
-
-                
-                // console.log("newperson");
-                // total=0
-                // for (var k = 0; k < newPerson.length; k++){
-                //     total= newPerson[k]+total
-                // }
-                // console.log("------Total below")
-                // console.log(total)
-            
-                //for(var j= 0)
-                // 
-                //console.log("below You are turning the scores into integers")
-            //    var scores = parseInt(surveyResults[i].scores)
-            //    console.log("below You are printing the survey index scores  scores ")
-            //    console.log((surveyResults[i].scores[i]))
-            //    console.log("below You are printing the scores ")
-            //    console.log(scores[i]);
+                equator.push({diff:difference,name:surveyResults[i].name});
+        
             }
-
-            res.json(surveyResults);
+        
+            surveyResults.push(req.body);
+        
+                equator.sort(function(a,b){
+                    return a.diff-b.diff
+                });
+            // console.log("below is the sorted equator")
+            // console.log(equator[0])
+           
+            res.json(equator[0]);
 
     });
 }

@@ -2,7 +2,7 @@ var express = require("express");
 
 var app = express();
 
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 5002;
 
 app.use(express.static("app"));
 app.use(express.urlencoded({ extended: true }));
@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 
-require("./app/routing/apiRoutes")(app);
+require("./app/routing/apiRoutes")(app);``
 require("./app/routing/htmlRoutes")(app);
 
 app.listen(PORT, function () {

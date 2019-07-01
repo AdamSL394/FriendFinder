@@ -1,18 +1,18 @@
 var surveyAnswers = [
     {   
         name:"Adam",
-        photo:"oudsgfous",
+        photo: "holdint-tank/LinkedInProfile.jpeg ",
         scores:[
-        1,
         3,
-        2,
-        3,
-        1,
-        2,
+        4,
         5,
-        6,
-        7,
-        5
+        5,
+        3,
+        3,
+        4,
+        4,
+        4,
+        3
         ]
     },
     {   
@@ -20,14 +20,14 @@ var surveyAnswers = [
         photo:"oudsgfous",
         scores:[
         1,
-        3,
-        2,
-        3,
         1,
-        2,
+        1,
+        1,
+        1,
+        1,
         5,
-        6,
-        7,
+        1,
+        1,
         5
         ]
     }
