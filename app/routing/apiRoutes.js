@@ -23,7 +23,7 @@ module.exports = function (app) {
                     
                     
                 }
-                equator.push({diff:difference,name:surveyResults[i].name,photo:surveyResults.photo});
+                equator.push({diff:difference,name:surveyResults[i].name,photo:surveyResults[i].photo});
         
             }
         
@@ -32,8 +32,7 @@ module.exports = function (app) {
                 equator.sort(function(a,b){
                     return a.diff-b.diff
                 });
-            // console.log("below is the sorted equator")
-            // console.log(equator[0])
+          
            
             res.json(equator[0]);
 
