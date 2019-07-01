@@ -181,19 +181,15 @@
             ten = $("#ten").val()
         ]
         }
-      
-    // console.log(typeof(one))
-    // console.log(newReservation);
-
-      
         
-
         $.post("/api/friends", newReservation, function(data){
             if (data) {
                 console.log("below is data")
                 console.log(data)
                 console.log("below is data. name")
                 console.log(data.name)
+                console.log("below is data. name")
+                console.log(data.photo)
           alert("You have submitted your results ");
         }
         else {

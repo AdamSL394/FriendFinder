@@ -23,7 +23,7 @@ module.exports = function (app) {
                     
                     
                 }
-                equator.push({diff:difference,name:surveyResults[i].name});
+                equator.push({diff:difference,name:surveyResults[i].name,photo:surveyResults.photo});
         
             }
         
