@@ -54,7 +54,7 @@
         <h2>Question 1 </h2>
         <p>You are more of a detail-oriented than a big picture person.</p>
         <div class="form-group col-md-4">
-            <select id="one" class="question" style="width: 200px;">
+            <select id="one" class="question" style="width: 200px;" required>
                 <option selected>Select an Option</option>
                 <option value=1>1 (Totally Disagree)</option>
                 <option value=2>2</option>
@@ -172,7 +172,7 @@
             </select>
         </div>
         <button type="button" class="btn btn-primary d-flex justify-content-center text-center" data-toggle="modal"
-            data-target="#exampleModal" style="margin: 0 auto; width: 200px;">Submit</button>
+            data-target="#exampleModal" style="margin: 0 auto; width: 200px;" >Submit</button>
         <hr class="break mb-4">
         <a href="/friends">API Friends List |</a>
         <a href="https://github.com/AdamSL394/FriendFinder">Git Hub Repo</a>
@@ -253,8 +253,9 @@
                 })
             }
             else {
-
-                alert(" please fill out the survery! ")
+                $("#resultPhoto").hide();
+                // alert(" please fill out the survery! ")
+                $(".modal-body").prepend("please fill out the survery!!" )
                 
             }
 
