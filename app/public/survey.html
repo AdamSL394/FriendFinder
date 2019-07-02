@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../styling/survey.css">
+    <link rel="stylesheet" type="text/css" href="../styling/survey.css">
 
     <title>Dating Survey</title>
 </head>
@@ -30,9 +30,9 @@
             <span>e</span>
             <span>s</span>
             <span>t</span>
-            <span>i</span> 
-            <span>o</span> 
-            <span>n</span> 
+            <span>i</span>
+            <span>o</span>
+            <span>n</span>
         </h1>
         <hr>
         <h2>About You</h2>
@@ -47,7 +47,7 @@
         <div class="input-group mb-3">
             <div class="input-group-prepend">
             </div>
-            <input placeholder=".png .jpeg"type="text" class="photo" aria-label="Sizing example input"
+            <input placeholder=".png .jpeg" type="text" class="photo" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default" style="width:100%;">
         </div>
 
@@ -171,91 +171,101 @@
                 <option value=5>5 (Strongly Agree)</option>
             </select>
         </div>
-        <button type="button" class="btn btn-primary d-flex justify-content-center text-center" data-toggle="modal"  data-target="#exampleModal" style="margin: 0 auto; width: 200px;">Submit</button>
-        <hr class= "break mb-4">
+        <button type="button" class="btn btn-primary d-flex justify-content-center text-center" data-toggle="modal"
+            data-target="#exampleModal" style="margin: 0 auto; width: 200px;">Submit</button>
+        <hr class="break mb-4">
         <a href="/friends">API Friends List |</a>
         <a href="https://github.com/AdamSL394/FriendFinder">Git Hub Repo</a>
     </div>
 
     <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button> -->
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Match!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="modal-body" >
-          <img id="resultPhoto" style="height:200px; width: 200px;"> </img>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Match!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="resultPhoto" style="height:200px; width: 200px;"> </img>
 
-          
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> --> 
-      </div>
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-      
-   
+
+
 
     <script type="text/javascript">
 
-    
 
-        $(".btn").on("click", function(){
-        if($(".question").val() === "Select an Option"){
-        console.log("osjidbflidbflisdbf")
-        }
-            event.preventDefault();
-        var newReservation = {
-            name : $(".name").val(),
-            photo : $(".photo").val(),
-            scores: [
-            one =  $("#one").val(),
-            two = $("#two").val(),
-            three = $("#three").val(),
-            four = $("#four").val(),
-            five = $("#five").val(),
-            six = $("#six").val(),
-            seven = $("#seven").val(),
-            eight = $("#eight").val(),
-            nine = $("#nine").val(),
-            ten = $("#ten").val()
-        ]
-        }
-    
-        $.post("/api/friends", newReservation, function(data){
-            if (data) {
-                console.log("below is data")
-                $(".modal-body").prepend("Your match is...!"+ data.name)
-                $("#resultPhoto").attr("src",data.photo);
-                console.log(data.name)
-                console.log(data.photo)
-          alert("You have submitted your results ");
-    
-        }
-        else {
-            console.log("sorry no data");
-        }
+
+        $(".btn").on("click", function submit() {
+            if ($("#one").val() !== "Select an Option" || $("#two ").val() !== "Select an Option" || $("#three").val() !== "Select an Option" || $("#four").val() !== "Select an Option" || $("#five").val() !== "Select an Option" || $("#six").val() !== "Select an Option" || $("#seven").val() !== "Select an Option" || $("#eight").val() !== "Select an Option" || $("#nine").val() !== "Select an Option" || $("#ten").val() !== "Select an Option") {
+
+
+
+                event.preventDefault();
+                var newReservation = {
+                    name: $(".name").val(),
+                    photo: $(".photo").val(),
+                    scores: [
+                        one = $("#one").val(),
+                        two = $("#two").val(),
+                        three = $("#three").val(),
+                        four = $("#four").val(),
+                        five = $("#five").val(),
+                        six = $("#six").val(),
+                        seven = $("#seven").val(),
+                        eight = $("#eight").val(),
+                        nine = $("#nine").val(),
+                        ten = $("#ten").val()
+                    ]
+                }
+
+                $.post("/api/friends", newReservation, function (data) {
+                    if (data) {
+                        console.log("below is data")
+                        $(".modal-body").prepend("Your match is...!" + data.name)
+                        $("#resultPhoto").attr("src", data.photo);
+                        console.log(data.name)
+                        console.log(data.photo)
+                        alert("You have submitted your results ");
+                        setTimeout(function(){ location.reload(); }, 4000);
+                        
+                    }
+                    else {
+                        console.log("sorry no data");
+                    }
+                })
+            }
+            else {
+
+                alert(" please fill out the survery! ")
+                
+            }
+
         })
-    
-    })
 
     </script>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
