@@ -20,8 +20,8 @@ The following will get up and running locally.
 Author
 Adam Lehrer
 
-![Friend Finder](/app/assets/home.png)
-![Friend Finder](/app/assets/survey.png)
+![Friend Finder](app/assets/HomePage.png)
+![Friend Finder](app/assets/Survey.png)
 
 
 
